@@ -2,11 +2,21 @@
  * Created by fran on 14/07/2017.
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 
 
-export default () => {
-    return (
-        <div>List of posts</div>
-    )
+class PostIndex extends Component{
+
+    componentWillMount(){
+        console.log('this wuld be a good time to call an action creator to fetch post')
+    }
+
+    render(){
+        return (
+            <div>List of posts</div>
+        )
+    }
+
 }
+
+export default PostIndex;
