@@ -13,8 +13,20 @@ class PostIndex extends Component{
         this.props.fetchPosts();
     }
 
+    renderPosts(){
+        return this.props.posts.map((post) => {
+            return(
+
+                <li className="list-group-item post" key={post.id}>
+                    <span className="">{post.categories}</span>
+                    <strong>{post.title}</strong>
+                </li>
+
+            );
+        });
+    };
     render(){
-        return (
+         return (
             <div>
                 <div className="text-xs-right">
                     <Link to="/posts/new" className="btn btn-primary">
@@ -22,12 +34,20 @@ class PostIndex extends Component{
                     </Link>
                 </div>
                 List of posts
+                <h3>Posts</h3>
+                <ul className="list-group">
+                    {this.renderPosts()}
+                </ul>
             </div>
         )
     }
 
 }
 
+function mapStateToProps(state){
+
+    return { posts: state.posts.all }
+}
 
 /*to refactor to ES6 the function mapDispatchToProps, change
 this{{{
@@ -42,4 +62,4 @@ this{{{
  }}}
 }*/
 
-export default connect(null, { fetchPosts })(PostIndex);
+export default connect(mapStateToProps, { fetchPosts })(PostIndex);

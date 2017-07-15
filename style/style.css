@@ -1,3 +1,13 @@
 .btn-cancel{
-    margin-left:10px
+    margin-left:10px;
+
+}
+li.post{
+    height: 50px;
+}
+.post span{
+    float: left;
+}
+.post strong{
+    float: right;
 }
