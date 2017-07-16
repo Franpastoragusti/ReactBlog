@@ -28,6 +28,7 @@ class PostShow extends Component{
              })
     }
 
+
     render(){
         const {post} = this.props;
 
