@@ -14,6 +14,16 @@ export function fetchPosts() {
 
     const request = Axios.get(`${ROOT_URL}/posts${API_KEY}`);
 
+    // TO make the request and implement thunk
+    // return(dispatch) =>{
+    //     request.then(({data})=>{
+    //         dispatch({
+    //             type: 'FETCH_POSTS',
+    //             payload: data
+    //         })
+    //     })
+    // }
+    //
     return{
         type: FETCH_POSTS,
         payload: request
