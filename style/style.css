@@ -11,3 +11,6 @@ li.post{
 .post strong{
     float: right;
 }
+.delete{
+    float: right;
+}
