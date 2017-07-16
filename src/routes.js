@@ -17,6 +17,6 @@ export default (
     <Route path="/" component={App}>
         <IndexRoute component={PostIndex}/>
         <Route path="posts/new" components={PostsNew}/>
-        <Route path="post/:id" components={PostShow}/>
+        <Route path="posts/:id" components={PostShow}/>
     </Route>
 )
