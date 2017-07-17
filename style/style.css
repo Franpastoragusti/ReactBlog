@@ -16,10 +16,20 @@ li.post{
 }
 
 .fade-enter{
-    right: 100px;
+    transform: rotateX(90deg) rotateZ(90deg);
+    opacity: 0;
 }
 
 .fade-enter-active{
-    right:0px;
+    opacity:1;
+    transform: rotateX(0deg) rotateZ(0deg);
     transition: .5s ease-in all;
+}
+
+.fade-leave{
+    /*css to end the animation*/
+}
+
+.fade-leave-active{
+    /*css to end the animation*/
 }
